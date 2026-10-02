@@ -1,0 +1,600 @@
+{
+  "note": "Original-paper solvers on new ring data. Not the 4-page Gurobi/improved-DRL pipeline.",
+  "data": {
+    "study_area": "绕城高速内侧（绕城高速_面.shp）",
+    "n_outlets": 1074,
+    "n_grids": 8798,
+    "n_demand_top900": 900,
+    "n_candidates": 2000,
+    "candidate_meta": {
+      "n_candidates": 2000,
+      "n_feasible_pool": 14258,
+      "n_buildings_in_ring": 126044,
+      "n_feasible_west_of_108p85": 550,
+      "n_sampled_west_of_108p85": 275,
+      "seed": 42,
+      "exclude_radius_m": 500.0,
+      "sampled": true,
+      "outlets": 1074,
+      "buildings_csv": "C:\\Users\\suche\\Desktop\\肉夹馍\\data\\buildings\\xian_buildings_osm.csv",
+      "study_area": "C:\\Users\\suche\\Desktop\\新建文件夹 (2)\\绕城高速_面.shp",
+      "overlap_with_previous_2000": 268,
+      "sample_method": "1km-cell equal quota + within-cell maxmin spread",
+      "cell_m": 1000.0,
+      "note": "Spatially balanced resample so candidates are not clustered by OSM building density.",
+      "arcgis": "C:\\Users\\suche\\Desktop\\新建文件夹 (2)\\候选点.shp",
+      "results_shp": "C:\\Users\\suche\\Desktop\\肉夹馍\\results\\mclp_candidates_2000.shp"
+    }
+  },
+  "params": {
+    "R_walk_m": 500.0,
+    "R_delivery_m": 2000.0,
+    "delta_min_m": 400.0,
+    "weights": {
+      "w1": 0.45,
+      "w2": 0.4,
+      "w3": 0.15
+    },
+    "GA-Logistics": {
+      "pop_size": 36,
+      "generations": 40,
+      "mutation": 0.2,
+      "seed": 42
+    },
+    "Classic GA": {
+      "pop_size": 40,
+      "generations": 50,
+      "seed": 42
+    }
+  },
+  "existing_500m_buffer": {
+    "n_demand": 900,
+    "n_outlets": 1074,
+    "grid_coverage_pct": 86.56,
+    "demand_weighted_coverage_pct": 86.67,
+    "population_weighted_coverage_pct": 92.39,
+    "uncovered_high_demand_n": 37,
+    "uncovered_high_demand_pct": 12.33,
+    "mean_dist_all_m": 278.35,
+    "mean_dist_uncovered_m": 795.9
+  },
+  "table5_like": [
+    {
+      "P": 10,
+      "method": "Greedy-Logistics",
+      "role": "logistics",
+      "time_s": 5.595,
+      "objective": 0.182427,
+      "walk_coverage_pct": 7.01,
+      "delivery_coverage_pct": 48.21,
+      "mean_travel_m": 1160.6
+    },
+    {
+      "P": 10,
+      "method": "GA-Logistics",
+      "role": "logistics",
+      "time_s": 0.699,
+      "objective": 0.137735,
+      "walk_coverage_pct": 3.44,
+      "delivery_coverage_pct": 39.79,
+      "mean_travel_m": 1237.1
+    },
+    {
+      "P": 20,
+      "method": "Greedy-Logistics",
+      "role": "primary",
+      "time_s": 14.8626,
+      "objective": 0.284586,
+      "walk_coverage_pct": 11.27,
+      "delivery_coverage_pct": 74.46,
+      "mean_travel_m": 1145.8
+    },
+    {
+      "P": 20,
+      "method": "GA-Logistics",
+      "role": "logistics",
+      "time_s": 0.9805,
+      "objective": 0.221687,
+      "walk_coverage_pct": 5.44,
+      "delivery_coverage_pct": 63.94,
+      "mean_travel_m": 1221.0
+    },
+    {
+      "P": 30,
+      "method": "Greedy-Logistics",
+      "role": "logistics",
+      "time_s": 27.9393,
+      "objective": 0.346082,
+      "walk_coverage_pct": 14.79,
+      "delivery_coverage_pct": 87.8,
+      "mean_travel_m": 1088.3
+    },
+    {
+      "P": 30,
+      "method": "GA-Logistics",
+      "role": "logistics",
+      "time_s": 1.2785,
+      "objective": 0.275991,
+      "walk_coverage_pct": 6.24,
+      "delivery_coverage_pct": 79.3,
+      "mean_travel_m": 1164.8
+    },
+    {
+      "P": 20,
+      "method": "Classic GA (single-radius walk-in)",
+      "role": "benchmark",
+      "time_s": 0.1513,
+      "objective": null,
+      "walk_coverage_pct": 8.27,
+      "delivery_coverage_pct": null,
+      "mean_travel_m": null
+    },
+    {
+      "P": 20,
+      "method": "Classic DRL (single-radius walk-in)",
+      "role": "benchmark",
+      "time_s": 16.4206,
+      "objective": null,
+      "walk_coverage_pct": 14.51,
+      "delivery_coverage_pct": null,
+      "mean_travel_m": null
+    }
+  ],
+  "table6_like": {
+    "primary": {
+      "label": "Primary-scenario benchmark",
+      "time_s": 15.9682,
+      "objective": 0.284586,
+      "walk_coverage_pct": 11.27,
+      "delivery_coverage_pct": 74.46,
+      "mean_travel_m": 1145.8
+    },
+    "no_travel": {
+      "label": "Travel-distance penalty removed",
+      "time_s": 15.7462,
+      "objective": 0.426802,
+      "walk_coverage_pct": 9.26,
+      "delivery_coverage_pct": 76.1,
+      "mean_travel_m": 1214.8
+    },
+    "no_capacity": {
+      "label": "Capacity constraint removed",
+      "time_s": 4.4197,
+      "objective": 0.284586,
+      "walk_coverage_pct": 11.27,
+      "delivery_coverage_pct": 74.46,
+      "mean_travel_m": 1145.8
+    },
+    "no_spacing": {
+      "label": "Minimum-spacing constraint removed",
+      "time_s": 15.5905,
+      "objective": 0.284586,
+      "walk_coverage_pct": 11.27,
+      "delivery_coverage_pct": 74.46,
+      "mean_travel_m": 1145.8
+    },
+    "tight_capacity": {
+      "label": "Tightened capacity",
+      "time_s": 11.2576,
+      "objective": 0.208088,
+      "walk_coverage_pct": 13.97,
+      "delivery_coverage_pct": 43.86,
+      "mean_travel_m": 918.4
+    },
+    "strict_spacing": {
+      "label": "Increased spacing (800 m)",
+      "time_s": 13.872,
+      "objective": 0.284586,
+      "walk_coverage_pct": 11.27,
+      "delivery_coverage_pct": 74.46,
+      "mean_travel_m": 1145.8
+    },
+    "walk_priority": {
+      "label": "Walk-in-priority (0.60/0.30/0.10)",
+      "time_s": 14.4284,
+      "objective": 0.248599,
+      "walk_coverage_pct": 11.42,
+      "delivery_coverage_pct": 74.07,
+      "mean_travel_m": 1138.6
+    },
+    "delivery_priority": {
+      "label": "Delivery-priority (0.25/0.55/0.20)",
+      "time_s": 14.7597,
+      "objective": 0.354036,
+      "walk_coverage_pct": 8.32,
+      "delivery_coverage_pct": 77.58,
+      "mean_travel_m": 1204.6
+    },
+    "efficiency_priority": {
+      "label": "Efficiency-priority (0.35/0.35/0.30)",
+      "time_s": 14.4693,
+      "objective": 0.176623,
+      "walk_coverage_pct": 12.1,
+      "delivery_coverage_pct": 70.19,
+      "mean_travel_m": 1058.1
+    }
+  },
+  "table8_like": [
+    {
+      "P": 10,
+      "method": "Greedy-Logistics",
+      "role": "logistics",
+      "time_s": 5.595,
+      "objective": 0.182427,
+      "walk_coverage_pct": 7.01,
+      "delivery_coverage_pct": 48.21,
+      "mean_travel_m": 1160.6
+    },
+    {
+      "P": 20,
+      "method": "Greedy-Logistics",
+      "role": "primary",
+      "time_s": 14.8626,
+      "objective": 0.284586,
+      "walk_coverage_pct": 11.27,
+      "delivery_coverage_pct": 74.46,
+      "mean_travel_m": 1145.8
+    },
+    {
+      "P": 30,
+      "method": "Greedy-Logistics",
+      "role": "logistics",
+      "time_s": 27.9393,
+      "objective": 0.346082,
+      "walk_coverage_pct": 14.79,
+      "delivery_coverage_pct": 87.8,
+      "mean_travel_m": 1088.3
+    }
+  ],
+  "table9_like": [
+    {
+      "R_d_m": 1500,
+      "walk_coverage_pct": 12.02,
+      "delivery_coverage_pct": 55.57,
+      "mean_travel_m": 861.9,
+      "objective": 0.228469
+    },
+    {
+      "R_d_m": 2000,
+      "walk_coverage_pct": 11.27,
+      "delivery_coverage_pct": 74.46,
+      "mean_travel_m": 1145.8,
+      "objective": 0.284586
+    },
+    {
+      "R_d_m": 3000,
+      "walk_coverage_pct": 11.82,
+      "delivery_coverage_pct": 95.24,
+      "mean_travel_m": 1520.2,
+      "objective": 0.361728
+    }
+  ],
+  "classic_posthoc_logistics_eval": {
+    "Classic-GA": {
+      "objective": 0.18455295533574476,
+      "walk_coverage": 0.08268399546548649,
+      "delivery_coverage": 0.4602484297551044,
+      "travel_norm": 0.24502809683843935,
+      "mean_travel_m": 1064.764509761878,
+      "solve_seconds": 0.15126060001784936,
+      "selected_count": 20,
+      "selected_indices": [
+        1931,
+        1161,
+        1794,
+        525,
+        644,
+        435,
+        1016,
+        63,
+        1599,
+        1811,
+        1901,
+        508,
+        1389,
+        1221,
+        889,
+        707,
+        227,
+        1610,
+        642,
+        973
+      ],
+      "walk_in_only_objective": 0.08268399546548649
+    },
+    "Classic-DRL": {
+      "objective": 0.22756671669989273,
+      "walk_coverage": 0.14505325656412524,
+      "delivery_coverage": 0.49497165404038257,
+      "travel_norm": 0.23797273580077752,
+      "mean_travel_m": 961.5610666115335,
+      "solve_seconds": 16.420565299980808,
+      "selected_count": 20,
+      "selected_indices": [
+        710,
+        1606,
+        1798,
+        58,
+        1855,
+        1931,
+        1019,
+        385,
+        1009,
+        585,
+        660,
+        443,
+        433,
+        1787,
+        1899,
+        37,
+        526,
+        456,
+        1367,
+        49
+      ],
+      "walk_in_only_objective": 0.14505325656412524
+    },
+    "note": "Not reported in the original Table 5; evaluated after selection with the logistics oracle."
+  },
+  "by_P": {
+    "10": {
+      "capacity_Q": 14.796282909772424,
+      "Greedy-Logistics": {
+        "objective": 0.182427423888794,
+        "walk_coverage": 0.07012982906201676,
+        "delivery_coverage": 0.4820826688768888,
+        "travel_norm": 0.2797604449324605,
+        "mean_travel_m": 1160.6326590591375,
+        "solve_seconds": 5.595010099990759,
+        "selected_count": 10,
+        "selected_indices": [
+          710,
+          531,
+          1933,
+          61,
+          1798,
+          1019,
+          1067,
+          128,
+          1058,
+          1606
+        ]
+      },
+      "GA-Logistics": {
+        "objective": 0.13773452356846438,
+        "walk_coverage": 0.03440818256148057,
+        "delivery_coverage": 0.39792578164182835,
+        "travel_norm": 0.2461298082728883,
+        "mean_travel_m": 1237.0638929569163,
+        "solve_seconds": 0.6990183999878354,
+        "selected_count": 10,
+        "selected_indices": [
+          738,
+          1451,
+          459,
+          1990,
+          1025,
+          507,
+          131,
+          1373,
+          1853,
+          1418
+        ]
+      }
+    },
+    "20": {
+      "capacity_Q": 7.398141454886212,
+      "Greedy-Logistics": {
+        "objective": 0.2845861830489963,
+        "walk_coverage": 0.11272779371819207,
+        "delivery_coverage": 0.7446118188759385,
+        "travel_norm": 0.426573677830437,
+        "mean_travel_m": 1145.7612329451988,
+        "solve_seconds": 14.862582599977031,
+        "selected_count": 20,
+        "selected_indices": [
+          710,
+          531,
+          1933,
+          61,
+          1798,
+          1019,
+          1067,
+          128,
+          1058,
+          1606,
+          409,
+          1373,
+          467,
+          1566,
+          145,
+          990,
+          385,
+          1899,
+          1810,
+          585
+        ]
+      },
+      "GA-Logistics": {
+        "objective": 0.22168667602623182,
+        "walk_coverage": 0.054410126928757144,
+        "delivery_coverage": 0.6393798199618698,
+        "travel_norm": 0.3903320605097124,
+        "mean_travel_m": 1220.9708480726968,
+        "solve_seconds": 0.9804779999540187,
+        "selected_count": 20,
+        "selected_indices": [
+          1727,
+          1098,
+          1039,
+          1923,
+          56,
+          236,
+          132,
+          1987,
+          534,
+          365,
+          1189,
+          1971,
+          1346,
+          642,
+          1020,
+          707,
+          1610,
+          94,
+          1447,
+          1489
+        ]
+      },
+      "Classic-GA": {
+        "objective": 0.18455295533574476,
+        "walk_coverage": 0.08268399546548649,
+        "delivery_coverage": 0.4602484297551044,
+        "travel_norm": 0.24502809683843935,
+        "mean_travel_m": 1064.764509761878,
+        "solve_seconds": 0.15126060001784936,
+        "selected_count": 20,
+        "selected_indices": [
+          1931,
+          1161,
+          1794,
+          525,
+          644,
+          435,
+          1016,
+          63,
+          1599,
+          1811,
+          1901,
+          508,
+          1389,
+          1221,
+          889,
+          707,
+          227,
+          1610,
+          642,
+          973
+        ],
+        "walk_in_only_objective": 0.08268399546548649
+      },
+      "Classic-DRL": {
+        "objective": 0.22756671669989273,
+        "walk_coverage": 0.14505325656412524,
+        "delivery_coverage": 0.49497165404038257,
+        "travel_norm": 0.23797273580077752,
+        "mean_travel_m": 961.5610666115335,
+        "solve_seconds": 16.420565299980808,
+        "selected_count": 20,
+        "selected_indices": [
+          710,
+          1606,
+          1798,
+          58,
+          1855,
+          1931,
+          1019,
+          385,
+          1009,
+          585,
+          660,
+          443,
+          433,
+          1787,
+          1899,
+          37,
+          526,
+          456,
+          1367,
+          49
+        ],
+        "walk_in_only_objective": 0.14505325656412524
+      }
+    },
+    "30": {
+      "capacity_Q": 4.932094303257474,
+      "Greedy-Logistics": {
+        "objective": 0.34608168540491085,
+        "walk_coverage": 0.14785130520350406,
+        "delivery_coverage": 0.8780494337827912,
+        "travel_norm": 0.4778078363318832,
+        "mean_travel_m": 1088.3392618873347,
+        "solve_seconds": 27.939300400030334,
+        "selected_count": 30,
+        "selected_indices": [
+          710,
+          1931,
+          61,
+          1798,
+          1019,
+          524,
+          1067,
+          128,
+          1058,
+          1606,
+          660,
+          1373,
+          402,
+          467,
+          1566,
+          145,
+          990,
+          385,
+          1899,
+          1810,
+          650,
+          1190,
+          1408,
+          986,
+          1676,
+          74,
+          1937,
+          167,
+          919,
+          296
+        ]
+      },
+      "GA-Logistics": {
+        "objective": 0.2759913143601605,
+        "walk_coverage": 0.062390038170213324,
+        "delivery_coverage": 0.7929821056438003,
+        "travel_norm": 0.4618469671597044,
+        "mean_travel_m": 1164.8357860099193,
+        "solve_seconds": 1.2784645999781787,
+        "selected_count": 30,
+        "selected_indices": [
+          1988,
+          1133,
+          77,
+          1930,
+          23,
+          524,
+          234,
+          1812,
+          1099,
+          1741,
+          546,
+          751,
+          1312,
+          696,
+          963,
+          1853,
+          1331,
+          140,
+          1599,
+          1960,
+          1334,
+          506,
+          1683,
+          922,
+          1411,
+          669,
+          1831,
+          914,
+          56,
+          1070
+        ]
+      }
+    }
+  }
+}

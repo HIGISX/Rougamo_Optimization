@@ -1,0 +1,13 @@
+﻿P,method,objective,walk_coverage_pct,delivery_coverage_pct,mean_travel_m,time_s,note
+10,Exact MIP (HiGHS),0.182427,7.01,48.21,1160.6,22.8792,HiGHS
+10,DRL-Logistics,0.182427,7.01,48.21,1160.6,1.6988,same dual-radius oracle
+10,Greedy-Logistics,0.182427,7.01,48.21,1160.6,5.595,existing ring run
+10,GA-Logistics,0.137735,3.44,39.79,1237.1,0.699,existing ring run
+20,Exact MIP (HiGHS),0.289402,11.6,75.51,1145.0,19.3323,HiGHS
+20,DRL-Logistics,0.284618,11.1,74.81,1151.3,4.7753,same dual-radius oracle
+20,Greedy-Logistics,0.284586,11.27,74.46,1145.8,14.8626,existing ring run
+20,GA-Logistics,0.221687,5.44,63.94,1221.0,0.9805,existing ring run
+30,Exact MIP (HiGHS),0.351647,15.18,88.95,1086.0,67.1261,HiGHS
+30,DRL-Logistics,0.348696,15.07,88.22,1088.4,8.3234,same dual-radius oracle
+30,Greedy-Logistics,0.346082,14.79,87.8,1088.3,27.9393,existing ring run
+30,GA-Logistics,0.275991,6.24,79.3,1164.8,1.2785,existing ring run

@@ -1,0 +1,180 @@
+{
+  "n_outlets": 1074,
+  "n_grids": 8798,
+  "table2_ann": {
+    "n": 1074,
+    "average_observed_distance_m": 251.7993,
+    "expected_average_distance_m": 338.2399,
+    "nearest_neighbor_ratio": 0.74444,
+    "z_score": -16.022336,
+    "p_value": 0.0,
+    "pattern": "聚集"
+  },
+  "table3_moran": {
+    "morans_i": 0.134564,
+    "expected_i": -0.000114,
+    "z_score": 25.1254,
+    "p_value": 0.0,
+    "pattern": "空间正相关（集聚）"
+  },
+  "table4_entropy": {
+    "population": 0.0259,
+    "transport": 0.1282,
+    "shopping": 0.1774,
+    "education": 0.1326,
+    "life_service": 0.1368,
+    "dining": 0.165,
+    "company": 0.1314,
+    "road_density": 0.0989,
+    "road_proximity": 0.0038
+  },
+  "table7_buffer_p75": {
+    "n_demand": 900,
+    "n_outlets": 1074,
+    "grid_coverage_pct": 86.56,
+    "demand_weighted_coverage_pct": 86.67,
+    "population_weighted_coverage_pct": 92.39,
+    "uncovered_high_demand_n": 31,
+    "uncovered_high_demand_pct": 13.78,
+    "high_demand_n": 225,
+    "high_demand_definition": "suitability >= P75 (original Table 7)",
+    "mean_dist_all_m": 278.35,
+    "mean_dist_uncovered_m": 795.9
+  },
+  "section46_supply_demand": {
+    "pearson_r": 0.0896,
+    "pearson_p": 0.007162,
+    "spearman_r": 0.0679,
+    "spearman_p": 0.041686,
+    "zone_counts": {
+      "均衡区": 562,
+      "高需求低供给": 236,
+      "低需求高供给": 102
+    },
+    "high_demand_low_supply_pct": 26.22
+  },
+  "district": [
+    {
+      "district": "未央区",
+      "outlets": 295,
+      "share_pct": 27.5,
+      "area_in_ring_km2": 165.05,
+      "density_per_km2": 1.79,
+      "density_per_100km2": 178.73,
+      "population": 1502448,
+      "outlets_per_10k_pop": 1.96,
+      "avg_suitability_district_grids": 0.0301,
+      "avg_suitability_outlet_grids": 0.0677
+    },
+    {
+      "district": "雁塔区",
+      "outlets": 257,
+      "share_pct": 23.9,
+      "area_in_ring_km2": 112.75,
+      "density_per_km2": 2.28,
+      "density_per_100km2": 227.93,
+      "population": 1601533,
+      "outlets_per_10k_pop": 1.6,
+      "avg_suitability_district_grids": 0.0373,
+      "avg_suitability_outlet_grids": 0.0664
+    },
+    {
+      "district": "莲湖区",
+      "outlets": 162,
+      "share_pct": 15.1,
+      "area_in_ring_km2": 40.05,
+      "density_per_km2": 4.05,
+      "density_per_100km2": 404.53,
+      "population": 933591,
+      "outlets_per_10k_pop": 1.74,
+      "avg_suitability_district_grids": 0.042,
+      "avg_suitability_outlet_grids": 0.057
+    },
+    {
+      "district": "碑林区",
+      "outlets": 131,
+      "share_pct": 12.2,
+      "area_in_ring_km2": 23.84,
+      "density_per_km2": 5.49,
+      "density_per_100km2": 549.49,
+      "population": 671059,
+      "outlets_per_10k_pop": 1.95,
+      "avg_suitability_district_grids": 0.0435,
+      "avg_suitability_outlet_grids": 0.0574
+    },
+    {
+      "district": "新城区",
+      "outlets": 127,
+      "share_pct": 11.8,
+      "area_in_ring_km2": 29.47,
+      "density_per_km2": 4.31,
+      "density_per_100km2": 430.96,
+      "population": 555463,
+      "outlets_per_10k_pop": 2.29,
+      "avg_suitability_district_grids": 0.0358,
+      "avg_suitability_outlet_grids": 0.0572
+    },
+    {
+      "district": "灞桥区",
+      "outlets": 91,
+      "share_pct": 8.5,
+      "area_in_ring_km2": 62.49,
+      "density_per_km2": 1.46,
+      "density_per_100km2": 145.63,
+      "population": 455426,
+      "outlets_per_10k_pop": 2.0,
+      "avg_suitability_district_grids": 0.0284,
+      "avg_suitability_outlet_grids": 0.0659
+    },
+    {
+      "district": "长安区",
+      "outlets": 11,
+      "share_pct": 1.0,
+      "area_in_ring_km2": 19.28,
+      "density_per_km2": 0.57,
+      "density_per_100km2": 57.06,
+      "population": 78809,
+      "outlets_per_10k_pop": 1.4,
+      "avg_suitability_district_grids": 0.0213,
+      "avg_suitability_outlet_grids": 0.0929
+    }
+  ],
+  "outlet_gini": 0.3243,
+  "lisa": {
+    "variable": "demand_intensity",
+    "n": 900,
+    "k_neighbors": 8,
+    "alpha": 0.05,
+    "permutations": 99,
+    "cluster_counts": {
+      "NS": 802,
+      "HH": 39,
+      "LH": 58,
+      "LL": 1,
+      "HL": 0
+    },
+    "hh_pct": 4.33,
+    "ll_pct": 0.11,
+    "significant_pct": 10.89
+  },
+  "brand": {
+    "其它/个体": 780,
+    "老潼关": 172,
+    "子午路张记": 60,
+    "飞鸿": 33,
+    "袁记": 22,
+    "张记": 4,
+    "秦豫": 2,
+    "樊家": 1
+  },
+  "district_counts": {
+    "未央区": 295,
+    "雁塔区": 257,
+    "莲湖区": 162,
+    "碑林区": 131,
+    "新城区": 127,
+    "灞桥区": 91,
+    "长安区": 11
+  },
+  "note": "Original-paper estimators on ring data. ANN uses point-set bbox. Moran = Rook on 250 m outlet counts. Supply-demand = 0.6/0.4 quantiles (same as summer enhanced_analysis, not strict tertiles). Table 7 high-demand = P75."
+}

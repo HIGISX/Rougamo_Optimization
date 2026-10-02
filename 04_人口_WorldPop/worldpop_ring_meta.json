@@ -1,0 +1,9 @@
+{
+  "source": "C:\\Users\\suche\\Desktop\\范小钰暑期\\肉夹馍\\data\\population\\_cache\\chn_pop_2025_R2025A_100m.tif",
+  "clip_tif": "C:\\Users\\suche\\Desktop\\肉夹馍\\data\\population\\worldpop_xian_100m_clip.tif",
+  "n_grids": 8798,
+  "zero_grids": 27,
+  "total_population": 5810559,
+  "west_of_108p85_population": 524077,
+  "assign": "100m pixel -> nearest 250m center within 130 m"
+}

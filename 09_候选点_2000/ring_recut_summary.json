@@ -1,0 +1,24 @@
+{
+  "study_area": "C:\\Users\\suche\\Desktop\\新建文件夹 (2)\\绕城高速_面.shp",
+  "n_grids": 8798,
+  "nonzero_grids": 8585,
+  "total_population": 6358709,
+  "pop_source": "clipped from previous 250m WorldPop grid",
+  "n_outlets": 1074,
+  "candidates": {
+    "n_candidates": 2000,
+    "n_feasible_pool": 13715,
+    "n_buildings_in_ring": 123934,
+    "seed": 42,
+    "exclude_radius_m": 500.0,
+    "sampled": true,
+    "outlets": 1074,
+    "study_area": "C:\\Users\\suche\\Desktop\\新建文件夹 (2)\\绕城高速_面.shp"
+  },
+  "grid_csv": "C:\\Users\\suche\\Desktop\\肉夹馍\\data\\population\\worldpop_xian_grid.csv",
+  "candidate_csv": "C:\\Users\\suche\\Desktop\\肉夹馍\\results\\mclp_candidates_2000.csv",
+  "arcgis": {
+    "grid": "C:\\Users\\suche\\Desktop\\新建文件夹 (2)\\人口网格.shp",
+    "candidates": "C:\\Users\\suche\\Desktop\\新建文件夹 (2)\\候选点.shp"
+  }
+}

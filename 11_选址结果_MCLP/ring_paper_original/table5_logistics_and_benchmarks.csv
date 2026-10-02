@@ -1,0 +1,9 @@
+﻿P,method,role,time_s,objective,walk_coverage_pct,delivery_coverage_pct,mean_travel_m
+10,Greedy-Logistics,logistics,5.595,0.182427,7.01,48.21,1160.6
+10,GA-Logistics,logistics,0.699,0.137735,3.44,39.79,1237.1
+20,Greedy-Logistics,primary,14.8626,0.284586,11.27,74.46,1145.8
+20,GA-Logistics,logistics,0.9805,0.221687,5.44,63.94,1221.0
+30,Greedy-Logistics,logistics,27.9393,0.346082,14.79,87.8,1088.3
+30,GA-Logistics,logistics,1.2785,0.275991,6.24,79.3,1164.8
+20,Classic GA (single-radius walk-in),benchmark,0.1513,,8.27,,
+20,Classic DRL (single-radius walk-in),benchmark,16.4206,,14.51,,

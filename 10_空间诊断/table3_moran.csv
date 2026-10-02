@@ -1,0 +1,6 @@
+﻿indicator,value
+Moran's I,0.134564
+E(I),-0.000114
+Z score,25.1254
+P value,0.0
+Pattern,空间正相关（集聚）

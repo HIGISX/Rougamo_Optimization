@@ -1,0 +1,12 @@
+﻿indicator,value
+n_demand,900
+n_outlets,1074
+grid_coverage_pct,86.56
+demand_weighted_coverage_pct,86.67
+population_weighted_coverage_pct,92.39
+uncovered_high_demand_n,31
+uncovered_high_demand_pct,13.78
+high_demand_n,225
+high_demand_definition,suitability >= P75 (original Table 7)
+mean_dist_all_m,278.35
+mean_dist_uncovered_m,795.9

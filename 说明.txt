@@ -1,0 +1,42 @@
+肉夹馍项目 · 复现数据包（G3002 绕城内侧口径）
+更新时间：2026-09-28 13:00
+用途：带到另一台电脑复现。含原数据 + 候选点/选址等中间产物。不含论文图件与脚本。
+
+————————————————
+01–07 原数据
+————————————————
+01_研究区边界_G3002     绕城内侧面/线（geojson + shp）
+02_肉夹馍网点_Amap      原始1735 + 清洗1074（csv/shp）
+03_影响因素POI_Amap     六类合计 34,008
+04_人口_WorldPop        全国 R2025A 100m（约880MB）+ 西安裁剪 tif
+05_建筑_OSM             建筑点 csv（绕城内 126,044）
+06_路网_OSM             17,820 段 / 约 8,651 km
+07_行政区划             区县 shp（统计/制图用）
+
+————————————————
+08–12 中间产物
+————————————————
+08_需求格网与适宜度
+  demand_grid / population_grid_250m / entropy_weights.json
+
+09_候选点_2000
+  mclp_candidates_2000（空间均衡抽样, seed=42）+ random 对照
+
+10_空间诊断
+  ANN / Moran / 缓冲覆盖 / 供需分区 / 区县统计 / LISA
+
+11_选址结果_MCLP
+  ring_mclp（P=10/20/30，Greedy·GA·DRL·Classic）
+  ring_paper_original（Table 5/6/9）
+  ring_same_objective（MIP/HiGHS 与同目标 DRL）
+  GIS_P20（可直接进 ArcGIS Pro）
+
+12_DRL改进结果
+  改进版 DRL 的 P10/P20/P30 选址
+
+————————————————
+坐标提醒
+————————————————
+1. 分析范围用 G3002 绕城内侧，不要用手绘 ROI。
+2. 高德 POI：lng/lat=WGS84，lng_gcj/lat_gcj=GCJ-02。
+3. 若另一台已有同版 WorldPop，可删除 04 里 chn_pop_2025_R2025A_100m.tif 以减小体积。

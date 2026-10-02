@@ -1,0 +1,40 @@
+{
+  "selected_indices": [
+    1765,
+    1358,
+    585,
+    531,
+    1874,
+    1204,
+    953,
+    1443,
+    1936,
+    56
+  ],
+  "selected_source_ids": [
+    "way/1265926322",
+    "way/1512649918",
+    "way/1004434949",
+    "way/1414508879",
+    "way/1372721596",
+    "way/1409622022",
+    "way/1292667757",
+    "way/1263649480",
+    "way/1370886578",
+    "way/1292496447"
+  ],
+  "objective": 0.1676199499893371,
+  "walk_coverage": 0.07072050508531581,
+  "delivery_coverage": 0.4290464762630104,
+  "travel_norm": 0.2388191186950613,
+  "mean_travel_m": 1113.25523880381,
+  "solve_seconds": 1.7019078999874182,
+  "demand_points": 900,
+  "candidate_facilities": 2000,
+  "selected_facilities": 10,
+  "seed": 1234,
+  "sampling_width": 12,
+  "n_rollouts": 64,
+  "cem_iter": 12,
+  "note": "improved DRL: CEM + multi-rollout + F-guided construct + swap LS"
+}

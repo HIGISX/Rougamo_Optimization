@@ -1,0 +1,39 @@
+{
+  "selected_indices": [
+    61,
+    128,
+    531,
+    710,
+    1019,
+    1058,
+    1067,
+    1606,
+    1798,
+    1933
+  ],
+  "selected_osm_ids": [
+    "way/841110057",
+    "way/1228133947",
+    "relation/19357091",
+    "way/1265923987",
+    "way/1372140027",
+    "way/1282651740",
+    "way/1465146439",
+    "way/1370886613",
+    "way/1414508857",
+    "way/1512649923"
+  ],
+  "objective": 0.182427423888794,
+  "walk_coverage": 0.07012982906201676,
+  "delivery_coverage": 0.4820826688768888,
+  "travel_norm": 0.2797604449324605,
+  "mean_travel_m": 1160.6326590591375,
+  "solver": "HiGHS",
+  "success": true,
+  "message": "Optimization terminated successfully. (HiGHS Status 7: Optimal)",
+  "mip_objective": 0.1824274238887958,
+  "runtime_seconds": 22.879246999975294,
+  "assignment_edges": 50597,
+  "spacing_pairs": 7677,
+  "n_selected": 10
+}

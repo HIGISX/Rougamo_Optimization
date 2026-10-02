@@ -1,0 +1,52 @@
+{
+  "source": {
+    "highway": "西安绕城高速 motorway 主线（不含匝道）",
+    "official_ref": "G3002（旧称 G3001）",
+    "osm_ways": 225,
+    "osm_length_km": 170.54,
+    "buffer_m": 80,
+    "note": "以内侧闭合多边形为分析范围，不覆盖正式 xian_study_area.geojson"
+  },
+  "area_km2": {
+    "ring_inner": 451.77,
+    "old_hand_drawn": 590.27,
+    "intersection": 439.61,
+    "ring_only": 12.16,
+    "old_only": 150.67
+  },
+  "envelope": {
+    "min_lng": 108.78087849237394,
+    "max_lng": 109.0893012768453,
+    "min_lat": 34.188204974874424,
+    "max_lat": 34.36556351001024
+  },
+  "poi_name_filtered_amap": {
+    "total": 772,
+    "in_old": 772,
+    "in_new": 550,
+    "both": 550,
+    "old_only": 222,
+    "new_only": 0
+  },
+  "official_clean_1048": {
+    "total": 1048,
+    "inside_new_ring": 959,
+    "outside_new_ring": 89
+  },
+  "way_name_counts": {
+    "西安绕城高速": 211,
+    "西安绕城联络线": 14
+  },
+  "way_ref_counts": {
+    "G5;G30;G70;G3002": 31,
+    "G65;G69;G3002": 40,
+    "G3002": 46,
+    "S3011": 14,
+    "G5;G30;G65;G69;G3002": 37,
+    "G5;G65;G69;G3002": 8,
+    "G5;G30;G65;G70;G3002": 19,
+    "G30;G70;G3002": 12,
+    "G70;G3002": 12,
+    "G5;G30;G65;G3002": 6
+  }
+}

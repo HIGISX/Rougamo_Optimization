@@ -1,0 +1,4 @@
+﻿P,Method,Obj,Walk_in_pct,Delivery_pct,Travel_m,Time_s,beat_GA
+10,DRL-improved,0.168,7.07,42.9,1113,1.7,True
+20,DRL-improved,0.258,8.84,70.19,1192,4.11,True
+30,DRL-improved,0.311,11.76,82.5,1160,7.23,True

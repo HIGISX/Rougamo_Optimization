@@ -1,0 +1,10 @@
+﻿,label,time_s,objective,walk_coverage_pct,delivery_coverage_pct,mean_travel_m
+primary,Primary-scenario benchmark,15.9682,0.284586,11.27,74.46,1145.8
+no_travel,Travel-distance penalty removed,15.7462,0.426802,9.26,76.1,1214.8
+no_capacity,Capacity constraint removed,4.4197,0.284586,11.27,74.46,1145.8
+no_spacing,Minimum-spacing constraint removed,15.5905,0.284586,11.27,74.46,1145.8
+tight_capacity,Tightened capacity,11.2576,0.208088,13.97,43.86,918.4
+strict_spacing,Increased spacing (800 m),13.872,0.284586,11.27,74.46,1145.8
+walk_priority,Walk-in-priority (0.60/0.30/0.10),14.4284,0.248599,11.42,74.07,1138.6
+delivery_priority,Delivery-priority (0.25/0.55/0.20),14.7597,0.354036,8.32,77.58,1204.6
+efficiency_priority,Efficiency-priority (0.35/0.35/0.30),14.4693,0.176623,12.1,70.19,1058.1

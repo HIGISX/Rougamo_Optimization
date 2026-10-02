@@ -1,0 +1,33 @@
+{
+  "source": "Amap Place API",
+  "category": "肉夹馍（业态）",
+  "total": 1735,
+  "keywords": [
+    "肉夹馍",
+    "老潼关肉夹馍",
+    "飞鸿肉夹馍",
+    "子午路张记",
+    "袁记肉夹馍",
+    "樊家肉夹馍",
+    "秦豫肉夹馍",
+    "腊汁肉夹馍"
+  ],
+  "study_area": "C:\\Users\\suche\\Desktop\\肉夹馍\\data\\boundaries\\xian_study_area.geojson",
+  "search_bbox_wgs84": {
+    "min_lng": 108.76068586839291,
+    "max_lng": 109.10950506441766,
+    "min_lat": 34.16806676897801,
+    "max_lat": 34.385725415102414
+  },
+  "note": "",
+  "coords": "lng/lat = WGS84; lng_gcj/lat_gcj = GCJ-02",
+  "by_district": {
+    "长安区": 14,
+    "雁塔区": 419,
+    "未央区": 447,
+    "莲湖区": 271,
+    "碑林区": 229,
+    "灞桥区": 146,
+    "新城区": 209
+  }
+}

@@ -1,0 +1,13 @@
+{
+  "source": "OpenStreetMap Overpass; summer table + west tiles",
+  "old_n": 130951,
+  "west_raw": 9964,
+  "merged_n": 133550,
+  "in_ring": 126044,
+  "lng_min": 108.7688169,
+  "lng_max": 109.1479032,
+  "tiles": [
+    "34.180,108.770,34.280,108.870",
+    "34.280,108.770,34.375,108.870"
+  ]
+}

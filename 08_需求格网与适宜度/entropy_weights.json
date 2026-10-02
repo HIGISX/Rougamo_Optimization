@@ -1,0 +1,11 @@
+{
+  "population": 0.0259,
+  "transport": 0.1282,
+  "shopping": 0.1774,
+  "education": 0.1326,
+  "life_service": 0.1368,
+  "dining": 0.165,
+  "company": 0.1314,
+  "road_density": 0.0989,
+  "road_proximity": 0.0038
+}

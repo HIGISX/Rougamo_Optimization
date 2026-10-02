@@ -1,0 +1,19 @@
+{
+  "n_candidates": 2000,
+  "n_feasible_pool": 14258,
+  "n_buildings_in_ring": 126044,
+  "n_feasible_west_of_108p85": 550,
+  "n_sampled_west_of_108p85": 275,
+  "seed": 42,
+  "exclude_radius_m": 500.0,
+  "sampled": true,
+  "outlets": 1074,
+  "buildings_csv": "C:\\Users\\suche\\Desktop\\肉夹馍\\data\\buildings\\xian_buildings_osm.csv",
+  "study_area": "C:\\Users\\suche\\Desktop\\新建文件夹 (2)\\绕城高速_面.shp",
+  "overlap_with_previous_2000": 268,
+  "sample_method": "1km-cell equal quota + within-cell maxmin spread",
+  "cell_m": 1000.0,
+  "note": "Spatially balanced resample so candidates are not clustered by OSM building density.",
+  "arcgis": "C:\\Users\\suche\\Desktop\\新建文件夹 (2)\\候选点.shp",
+  "results_shp": "C:\\Users\\suche\\Desktop\\肉夹馍\\results\\mclp_candidates_2000.shp"
+}
